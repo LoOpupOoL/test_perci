@@ -7,6 +7,7 @@ class Game{
             width: 800,
             height: 600,
             backgroundColor: 336699
+            const = 
         });
         document.getElementById('game').appendChild(this.app.canvas);
     }
