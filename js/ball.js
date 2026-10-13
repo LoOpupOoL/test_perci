@@ -54,20 +54,46 @@ class Ball{
         }
                 
             for (const brick of bricks) {
+            const bricks = 20;
             const brickLeft = brick.graphics.x;
             const brickRight = brick.graphics.x + brick.width;
             const brickTop = brick.graphics.y;
             const brickBottom = brick.graphics.y + brick.height;
 
             if (
-                ballRight > brickLeft &&
-                ballLeft < brickRight &&
-                ballBottom > brickTop &&
-                ballTop < brickBottom
-            ) {
+            ballRight > brickLeft &&
+            ballLeft < brickRight &&
+            ballBottom > brickTop &&
+            ballTop < brickBottom
+        ) {
+            const overlapLeft = ballRight - brickLeft;
+            const overlapRight = brickRight - ballLeft;
+            const overlapTop = ballBottom - brickTop;
+            const overlapBottom = brickBottom - ballTop;
+
+            const minX = Math.min(overlapLeft, overlapRight);
+            const minY = Math.min(overlapTop, overlapBottom);
+
+            if (minX < minY) {
+                this.speedX = -this.speedX;
+
+                if (overlapLeft < overlapRight) {
+                    this.graphics.x = brickLeft - radius;
+                } else {
+                    this.graphics.x = brickRight + radius;
+                }
+            } else {
                 this.speedY = -this.speedY;
-                break;
+
+                if (overlapTop < overlapBottom) {
+                    this.graphics.y = brickTop - radius;
+                } else {
+                    this.graphics.y = brickBottom + radius;
+                }
             }
+
+            break;
+        }
                 
     }
 
