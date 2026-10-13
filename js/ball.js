@@ -68,13 +68,12 @@ class Ball{
                 this.speedY = -this.speedY;
                 break;
             }
-                }
+                
         {
-            this.graphics.y = paddleTop - radius;
-            this.speedY = -Math.abs(this.speedY)
-            const paddleCentre = paddle.graphics.x + paddle.width/2;
+            break;
         }
-
-
     }
+
+
+}
 }
