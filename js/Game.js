@@ -51,22 +51,40 @@ class Game{
                 }
 
              }
-        this.app.ticker.add((ticker) => {
-        this.paddle.update(ticker.deltaTime);
-        this.ball.update(ticker.deltaTime, this.paddle, this.bricks);
-        this.score += points;
-        this.scoreText = "SCORE" = this.score;
-        }
-        if (this.ball.graphics.y - 10 > 600){
-            this.gameOver = true;
-            if (this.score > this.highScore){
-                this.highScore = this.score;
-                localStorage.setItem("arkanoidHighscore", this.highScore);
+                this.app.ticker.add((ticker) => {
+            if (this.gameOver) return;
 
+            this.paddle.update(ticker.deltaTime);
+
+            const points = this.ball.update(
+                ticker.deltaTime,
+                this.paddle,
+                this.bricks
+            );
+
+            if (points) {
+                this.score += points;
+                this.scoreText.text = "SCORE: " + this.score;
             }
 
+            if (this.ball.graphics.y - 10 > 600) {
+                this.gameOver = true;
 
-        };
-    }
+                if (this.score > this.highScore) {
+                    this.highScore = this.score;
+                    localStorage.setItem("arkanoidHighscore", this.highScore);
+                }
+
+                this.scoreText.text =
+                    "GAME OVER\n" +
+                    "SCORE: " + this.score + "\n" +
+                    "HIGH SCORE: " + this.highScore;
+
+                this.scoreText.x = 300;
+                this.scoreText.y = 260;
+            }
+        });
     }
 }
+    
+    
