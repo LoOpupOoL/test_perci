@@ -17,9 +17,16 @@ body{
     top: 30px;
     left: 30px;
 }
+.header_content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 100px;
+}
 .header_title{
     font-family: '8bit', Courier, monospace;
     color: white;
+    font-size: 20px;
     margin: 0;
 
 }
