@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Arkanoid';
-    src: url('./fonts/Arkanoid.ttf', './fonts/Arkanoid.woff') format('truetype');
+    src: url('./fonts/Arkanoid.ttf', './fonts/8bit.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
