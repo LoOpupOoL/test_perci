@@ -19,11 +19,11 @@ class Game{
         this.walls = new Wall();
         this.app.stage.addChild(this.walls.graphics);
         this.bricks = [];
-        const row = 4;
-        const col = 6;
+        const rows = 6;
+        const cols = 11;
         const brickWidth = 50;
         const brickHigh = 20;
-        const gap = 5;
+        const gap = 10;
         const startX = 75;
         const startY = 70;
         for(let row = 0; row < rows; row++)
@@ -39,7 +39,7 @@ class Game{
              }
         this.app.ticker.add((ticker) => {
         this.paddle.update(ticker.deltaTime);
-        this.ball.update(ticker.deltaTime, this.paddle);
+        this.ball.update(ticker.deltaTime, this.paddle, this.bricks);
 
 
         });

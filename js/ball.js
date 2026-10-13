@@ -8,7 +8,7 @@ class Ball{
         this.speedX = 3;
         this.speedY = -4;
     }
-    update(deltaTime, paddle){
+    update(deltaTime, paddle, brick){
         this.graphics.x += this.speedX * deltaTime;
         this.graphics.y += this.speedY * deltaTime;
         const radius = 10;
@@ -53,6 +53,26 @@ class Ball{
             this.speedX = normHit * 5
         }
         
+        const brickBottom = brick.graphics.y
+        const brickTop = brick.graphics.y - radius
+        const brickLeft = brick.graphics.x
+        const brickRight = brick.graphics.x + brick.width
+                if(
+            this.speedY > 0 &&
+            ballBottom >= brickTop &&
+            ballBottom - this.speedY * deltaTime <= paddleTop &&
+            ballRight > brickLeft &&
+            ballLeft < brickRight &&
+            ballTop >= brickBottom &&
+            ballTop + this.speedY * deltaTime <= brickBottom
+
+        )
+        {
+            this.graphics.y = paddleTop - radius;
+            this.speedY = -Math.abs(this.speedY)
+            const paddleCentre = paddle.graphics.x + paddle.width/2;
+        }
+
 
     }
 }
