@@ -12,12 +12,8 @@ class Game{
         this.paddle = new Paddle();
         this.app.stage.addChild(this.paddle.graphics);
 
-        const ball = new PIXI.Graphics();
-        ball.circle(0, 0, 10);
-        ball.fill(0xffffff);
-        ball.x = 400;
-        ball.y = 570;
-        this.app.stage.addChild(ball);
+        this.ball = new Ball();
+        this.app.stage.addChild(this.ball.graphics);
 
         const walls = new PIXI.Graphics();
         walls.rect(0, 0, 10, 600);
