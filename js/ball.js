@@ -8,7 +8,7 @@ class Ball{
         this.speedX = 3;
         this.speedY = -4;
     }
-    update(deltaTime){
+    update(deltaTime, paddle){
         this.graphics.x += this.speedX * deltaTime;
         this.graphics.y += this.speedY * deltaTime;
         const radius = 10;
@@ -29,6 +29,6 @@ class Ball{
         }
         const paddle = 100;
         
-        
+
     }
 }
