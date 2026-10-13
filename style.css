@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Arkanoid';
-    src: url('./fonts/Arkanoid.ttf', './fonts/8bit.ttf') format('truetype');
+    font-family: '8bit';
+    src: url('./fonts/8bit.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -22,7 +22,7 @@ body{
     text-align: center;
 }
 .content_title{
-    font-family: 'Arkanoid', Courier, monospace;
+    font-family: '8bit', Courier, monospace;
     color: white;
     text-align: center;
     max-width: 800px;
