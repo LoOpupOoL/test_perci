@@ -21,6 +21,7 @@ class Game{
         this.app.ticker.add((ticker) => {
         this.paddle.update(ticker.deltaTime);
         this.ball.update(ticker.deltaTime, this.paddle);
+        this.brick
         });
     }
 }
