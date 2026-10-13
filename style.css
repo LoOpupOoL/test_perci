@@ -16,11 +16,6 @@ body{
     position: absolute;
     top: 30px;
     left: 30px;
-
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    font-size: 20px;
 }
 .header_title{
     font-family: '8bit', Courier, monospace;
