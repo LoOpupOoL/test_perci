@@ -9,7 +9,8 @@ class Game{
             backgroundColor: 0x336699
         });
         document.getElementById('game').appendChild(this.app.canvas);
-        this paddle
+        this.paddle = new Paddle();
+        this.app.stage.addChild(this.paddle.graphics);
 
         const ball = new PIXI.Graphics();
         ball.circle(0, 0, 10);
