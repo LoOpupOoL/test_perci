@@ -30,6 +30,12 @@ body{
     margin: 0;
 
 }
+.header_scorevalue{
+    font-family: '8bit', Courier, monospace;
+    color: rgb(213, 124, 0);
+    font-size: 20px;
+    margin: 0;
+}
 .content{
     width: 100%;
     height: 100%;
