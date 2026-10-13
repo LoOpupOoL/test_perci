@@ -5,5 +5,6 @@ class Paddle {
     this.graphics.fill(0xffffff);
     this.graphics.x = 350;
     this.graphics.y = 580;
+    this.ke
   }
 }
