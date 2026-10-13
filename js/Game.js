@@ -13,7 +13,7 @@ class Game{
         });
         
         document.getElementById('game').appendChild(this.app.canvas);
-        this.scoreText = new.PIXI.Text({
+        this.scoreText = new PIXI.Text({
             text: "SCORE",
             style: {
                 fontSize: 24,
