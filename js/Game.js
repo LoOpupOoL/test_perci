@@ -1,6 +1,9 @@
 class Game{
     constructor(){
         this.app = new PIXI.Application();
+        this.score = 0;
+        this.highScore = Number(localStorage.getItem("arkanoidHighscore")) || 0;
+        this.gameover = false;
     }
     async init(){
         await this.app.init({
@@ -10,6 +13,14 @@ class Game{
         });
         
         document.getElementById('game').appendChild(this.app.canvas);
+        this.scoreText = new.PIXI.Text({
+            text: "SCORE",
+            style: {
+                fontSize: 24,
+                fill: 0xffffff
+
+            }
+        });
         this.paddle = new Paddle();
         this.app.stage.addChild(this.paddle.graphics);
 
