@@ -93,7 +93,7 @@ class Ball{
             }
             brick.graphics.parent.removeChild(brick.graphics);
             bricks.splice(i, 1);
-            break;
+            return 100;
         }
                 
     }
