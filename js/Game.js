@@ -21,9 +21,9 @@ class Game{
         ball.x = 400;
         ball.y = 570;
         this.app.stage.addChild(ball);
-        
+
         const walls = new PIXI.Graphics();
-        walls.lineStyle(10, 0xffffff);
+        walls.rect(10, 0xffffff);
         walls.drawRect(0, 0, 20, 600);
         this.app.stage.addChild(walls);
     }
