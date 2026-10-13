@@ -12,7 +12,7 @@ class Paddle {
             left: false,
             right: false
         };
-и
+        
         window.addEventListener("keydown", (event) => {
             if (event.key === "ArrowLeft") {
                 this.keys.left = true;
