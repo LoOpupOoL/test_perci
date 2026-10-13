@@ -7,8 +7,13 @@ class Game{
             width: 800,
             height: 600,
             backgroundColor: 336699
-            const = 
         });
         document.getElementById('game').appendChild(this.app.canvas);
+        const paddle = new PiXI.Graphics();
+        paddle.fill(0xffffff);
+        paddle.drawRect(0, 0, 100, 20);
+        paddle.x = 350;
+        paddle.y = 580;
+        this.app.stage.addChild(paddle);
     }
 }
