@@ -22,6 +22,33 @@ class Paddle {
                 this.keys.right = true;
             }
         });
+         window.addEventListener("keydown", (event) => {
+            if (event.key === "A") {
+                this.keys.left = true;
+            }
+
+            if (event.key === "D") {
+                this.keys.right = true;
+            }
+        });
+         window.addEventListener("keydown", (event) => {
+            if (event.key === "ф") {
+                this.keys.left = true;
+            }
+
+            if (event.key === "в") {
+                this.keys.right = true;
+            }
+        });
+         window.addEventListener("keydown", (event) => {
+            if (event.key === "Ф") {
+                this.keys.left = true;
+            }
+
+            if (event.key === "В") {
+                this.keys.right = true;
+            }
+        });
 
         window.addEventListener("keyup", (event) => {
             if (event.key === "a") {
@@ -29,6 +56,33 @@ class Paddle {
             }
 
             if (event.key === "d") {
+                this.keys.right = false;
+            }
+        });
+         window.addEventListener("keyup", (event) => {
+            if (event.key === "A") {
+                this.keys.left = false;
+            }
+
+            if (event.key === "D") {
+                this.keys.right = false;
+            }
+        });
+         window.addEventListener("keyup", (event) => {
+            if (event.key === "ф") {
+                this.keys.left = false;
+            }
+
+            if (event.key === "в") {
+                this.keys.right = false;
+            }
+        });
+         window.addEventListener("keyup", (event) => {
+            if (event.key === "Ф") {
+                this.keys.left = false;
+            }
+
+            if (event.key === "В") {
                 this.keys.right = false;
             }
         });
