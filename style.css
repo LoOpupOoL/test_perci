@@ -20,14 +20,12 @@ body{
     display: flex;
     flex-direction: column;
     gap: 10px;
-
-    font-family: 'Arkanoid', monospace;
     font-size: 20px;
 }
 .header_title{
     font-family: '8bit', Courier, monospace;
     color: white;
-    width: 0;
+    margin: 0;
 
 }
 .content{
