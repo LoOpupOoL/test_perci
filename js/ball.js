@@ -11,5 +11,7 @@ class Ball{
     update(deltaTime){
         this.graphics.x += this.speedX * deltaTime;
         this.graphics.y += this.speedY * deltaTime;
+        const radius = 10;
+        
     }
 }
