@@ -1,6 +1,8 @@
 @font-face {
-    font-family: 'Ar', Courier, monospace;
-    src: url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+    font-family: 'Arkanoid', Courier, monospace;
+    src: url('./fonts/Arkanoid.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 body{
     background: black;
@@ -20,7 +22,7 @@ body{
     text-align: center;
 }
 .content_title{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Arkanoid', Courier, monospace;
     color: white;
     font-size: 30px;
     text-align: center;
