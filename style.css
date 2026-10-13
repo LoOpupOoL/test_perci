@@ -14,51 +14,38 @@ body{
 }
 .header {
     position: absolute;
-    top: 30px;
-    left: 30px;
+    top: 20px;
+    left: 100px;
 }
-.header_content{
+
+.header_content {
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
+    gap: 120px;
+}
+
+.header_life,
+.header_score {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 100px;
 }
-.header_life{
-    flex-direction: column;
-    font-family: '8bit', Courier, monospace;
+
+.header_title,
+.header_scoreboard {
+    font-family: '8bit', monospace;
     color: rgb(213, 124, 0);
-    font-size: 20px;
-    margin: 0;
+    font-size: 24px;
+    white-space: nowrap;
 }
-.header_title{
-    font-family: '8bit', Courier, monospace;
-    color: rgb(213, 124, 0);
-    font-size: 20px;
-    margin: 0;
-}
-.header_titlevalue{
-    font-family: '8bit', Courier, monospace;
-    color: rgb(213, 124, 0);
-    font-size: 20px;
-    margin: 0;
-}
-.header_score{
-    flex-direction: column;
-    font-family: '8bit', Courier, monospace;
-    font-size: 20px;
-    margin: 0;
-}
-.header_scoreboard{
-    font-family: '8bit', Courier, monospace;
-    color: rgb(213, 124, 0);
-    font-size: 20px;
-    margin: 0;
-}
-.header_scorevalue{
-    font-family: '8bit', Courier, monospace;
-    color: rgb(213, 124, 0);
-    font-size: 20px;
-    margin: 0;
+
+.header_titlevalue,
+.header_scorevalue {
+    font-family: '8bit', monospace;
+    color: white;
+    font-size: 24px;
+    line-height: 1.2;
 }
 .content{
     width: 100%;
