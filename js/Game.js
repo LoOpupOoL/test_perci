@@ -15,11 +15,7 @@ class Game{
         this.ball = new Ball();
         this.app.stage.addChild(this.ball.graphics);
 
-        const walls = new PIXI.Graphics();
-        walls.rect(0, 0, 10, 600);
-        walls.rect(780, 0, 10, 600);
-        walls.rect(0, 0, 800, 10);
-        walls.fill(0xffffff);
-        this.app.stage.addChild(walls);
+        this.walls = new Wall();
+        this.app.stage.addChild(this.walls.graphics);
     }
 }
