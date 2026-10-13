@@ -22,14 +22,37 @@ body{
     flex-direction: row;
     align-items: center;
     gap: 100px;
-.header_lif
+}
+.header_life{
+    flex-direction: column;
+    font-family: '8bit', Courier, monospace;
+    color: rgb(213, 124, 0);
+    font-size: 20px;
+    margin: 0;
 }
 .header_title{
     font-family: '8bit', Courier, monospace;
     color: rgb(213, 124, 0);
     font-size: 20px;
     margin: 0;
-
+}
+.header_titlevalue{
+    font-family: '8bit', Courier, monospace;
+    color: rgb(213, 124, 0);
+    font-size: 20px;
+    margin: 0;
+}
+.header_score{
+    flex-direction: column;
+    font-family: '8bit', Courier, monospace;
+    font-size: 20px;
+    margin: 0;
+}
+.header_scoreboard{
+    font-family: '8bit', Courier, monospace;
+    color: rgb(213, 124, 0);
+    font-size: 20px;
+    margin: 0;
 }
 .header_scorevalue{
     font-family: '8bit', Courier, monospace;
