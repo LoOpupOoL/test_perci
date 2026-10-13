@@ -37,7 +37,7 @@ class Ball{
         const paddleRight = paddle.graphics.x + paddle.width
 
         if(
-            this.speedY >> 0 &&
+            this.speedY > 0 &&
             ballBottom >= paddleTop &&
             ballBottom - this.speedY * deltaTime <= paddleTop &&
             ballRight > paddleLeft &&
