@@ -20,7 +20,7 @@ class Game{
         this.app.stage.addChild(this.walls.graphics);
         this.brick = [];
         const row = 4;
-        const column = 6;
+        const col = 6;
         const brickWidth = 50;
         const brickHigh = 20;
         const gap = 5;
