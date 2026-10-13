@@ -1,15 +1,9 @@
 class Paddle {
     constructor() {
         this.graphics = new PIXI.Graphics();
-
-        // Размеры платформы
         this.width = 100;
         this.height = 20;
-
-        // Скорость движения
-        this.speed = 6;
-
-        // Рисуем платформу
+        this.speed = 5;
         this.graphics.rect(0, 0, this.width, this.height);
         this.graphics.fill(0xffffff);
         this.graphics.x = 350;
@@ -49,10 +43,9 @@ class Paddle {
             this.graphics.x += this.speed * deltaTime;
         }
 
-        // Ограничение движения стенками
+
         this.graphics.x = Math.max(
-            20,
-            Math.min(this.graphics.x, 800 - 20 - this.width)
+            20, Math.min(this.graphics.x, 800 - 20 - this.width)
         );
     }
 }

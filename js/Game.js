@@ -8,6 +8,9 @@ class Game{
             height: 600,
             backgroundColor: 0x336699
         });
+        this.app.ticker.add((ticker) => {
+    this.paddle.update(ticker.deltaTime);
+});
         document.getElementById('game').appendChild(this.app.canvas);
         this.paddle = new Paddle();
         this.app.stage.addChild(this.paddle.graphics);
