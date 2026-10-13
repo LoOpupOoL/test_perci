@@ -6,7 +6,7 @@ class Game{
         await this.app.init({
             width: 800,
             height: 600,
-            backgroundColor: 0x000000
+            backgroundColor: 0xa9a9a9
         });
         document.getElementById('game').appendChild(this.app.canvas);
     }
