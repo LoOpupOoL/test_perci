@@ -12,23 +12,23 @@ class Paddle {
             left: false,
             right: false
         };
-        
+
         window.addEventListener("keydown", (event) => {
-            if (event.key === "ArrowLeft") {
+            if (event.key === "a") {
                 this.keys.left = true;
             }
 
-            if (event.key === "ArrowRight") {
+            if (event.key === "d") {
                 this.keys.right = true;
             }
         });
 
         window.addEventListener("keyup", (event) => {
-            if (event.key === "ArrowLeft") {
+            if (event.key === "a") {
                 this.keys.left = false;
             }
 
-            if (event.key === "ArrowRight") {
+            if (event.key === "d") {
                 this.keys.right = false;
             }
         });
