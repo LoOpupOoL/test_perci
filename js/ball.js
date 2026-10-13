@@ -55,7 +55,6 @@ class Ball{
                 
             for (let i = 0; i < bricks.length; i++) {
             const brick = bricks[i];
-            const bricks = 20;
             const brickLeft = brick.graphics.x;
             const brickRight = brick.graphics.x + brick.width;
             const brickTop = brick.graphics.y;
