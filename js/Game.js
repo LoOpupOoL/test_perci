@@ -3,7 +3,7 @@ class Game{
         this.app = new PIXI.Application();
         this.score = 0;
         this.highScore = Number(localStorage.getItem("arkanoidHighscore")) || 0;
-        this.gameover = false;
+        this.gameOver = false;
     }
     async init(){
         await this.app.init({
@@ -14,13 +14,16 @@ class Game{
         
         document.getElementById('game').appendChild(this.app.canvas);
         this.scoreText = new PIXI.Text({
-            text: "SCORE",
+            text: "SCORE 0",
             style: {
                 fontSize: 24,
                 fill: 0xffffff
 
             }
         });
+        this.scoreText.x = 20;
+        this.scoreText.y = 20;
+        this.app.stage.addChild(this.scoreText);
         this.paddle = new Paddle();
         this.app.stage.addChild(this.paddle.graphics);
 
@@ -51,8 +54,19 @@ class Game{
         this.app.ticker.add((ticker) => {
         this.paddle.update(ticker.deltaTime);
         this.ball.update(ticker.deltaTime, this.paddle, this.bricks);
+        this.score += points;
+        this.scoreText = "SCORE" = this.score;
+        }
+        if (this.ball.graphics.y - 10 > 600){
+            this.gameOver = true;
+            if (this.score > this.highScore){
+                this.highScore = this.score;
+                localStorage.setItem("arkanoidHighscore", this.highScore);
+
+            }
 
 
-        });
+        };
+    }
     }
 }
