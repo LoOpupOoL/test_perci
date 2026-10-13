@@ -22,6 +22,7 @@ body{
     flex-direction: row;
     align-items: center;
     gap: 100px;
+.header_lif
 }
 .header_title{
     font-family: '8bit', Courier, monospace;
