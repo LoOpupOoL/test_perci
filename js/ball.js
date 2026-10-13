@@ -8,4 +8,5 @@ class Ball{
         this.speedX = 3;
         this.speedY = -4;
     }
+    update.e
 }
