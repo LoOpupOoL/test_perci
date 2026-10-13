@@ -12,6 +12,23 @@ class Ball{
         this.graphics.x += this.speedX * deltaTime;
         this.graphics.y += this.speedY * deltaTime;
         const radius = 10;
+        const wallsize = 10;
+        const fielWidth = 800;
+
+        if (this.graphics.x - radius <= wallsize){
+            this.graphics.x = wallsize + radius;
+            this.speedX = Math.abs(this.speedX)
+        }
+        if (this.graphics.x + radius >= fielWidth - wallsize){
+            this.graphics.x = fielWidth - wallsize - radius;
+            this.speedX = -Math.abs(this.speedX)
+        }
+        if (this.graphics.y - radius <= wallsize){
+            this.graphics.y = wallsize + radius;
+            this.speedY = Math.abs(this.speedY)
+        }
+        const paddle = 100;
+        
         
     }
 }

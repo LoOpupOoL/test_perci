@@ -20,7 +20,7 @@ class Game{
         this.app.stage.addChild(this.walls.graphics);
         this.app.ticker.add((ticker) => {
         this.paddle.update(ticker.deltaTime);
-        this.ball.update(ticker.deltaTime);
+        this.ball.update(ticker.deltaTime, this.paddle);
         });
     }
 }
