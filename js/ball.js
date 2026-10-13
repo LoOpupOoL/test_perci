@@ -27,7 +27,31 @@ class Ball{
             this.graphics.y = wallsize + radius;
             this.speedY = Math.abs(this.speedY)
         }
-        const ballBottom = this.graphics.y 
+        const ballBottom = this.graphics.y + radius
+        const ballRight = this.graphics.x + radius
+        const ballLeft = this.graphics.x - radius
+        const ballTop = this.graphics.y - radius
+
+        const paddleTop = paddle.graphics.y
+        const paddleLeft = paddle.graphics.x
+        const paddleRight = paddle.graphics.x + paddle.width
+
+        if(
+            this.speedY >> 0 &&
+            ballBottom >= paddleTop &&
+            ballBottom - this.speedY * deltaTime <= paddleTop &&
+            ballRight > paddleLeft &&
+            ballLeft < paddleRight
+
+        )
+        {
+            this.graphics.y = paddleTop - radius;
+            this.speedY = -Math.abs(this.speedY)
+            const paddleCentre = paddle.graphics.x + paddle.width/2;
+            const hit = this.graphics.x - paddleCentre;
+            const normHit = hit / (paddle.width/2);
+            this.speedX = normHit * 5
+        }
         
 
     }
