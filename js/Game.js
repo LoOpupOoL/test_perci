@@ -24,7 +24,7 @@ class Game{
 
         const walls = new PIXI.Graphics();
         walls.rect(0, 0, 20, 600);
-        walls.fill(10, 0xffffff);
+        walls.fill(0xffffff);
         this.app.stage.addChild(walls);
     }
 }
