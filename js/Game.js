@@ -3,6 +3,11 @@ class Game{
         this.app = new PIXI.Application();
     }
     async init(){
-        awa
+        await this.app.init({
+            width: 800,
+            height: 600,
+            backgroundColor: 0x000000
+        });
+        document.getElementById('game').appendChild(this.app.canvas);
     }
 }
