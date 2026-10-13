@@ -52,21 +52,23 @@ class Ball{
             const normHit = hit / (paddle.width/2);
             this.speedX = normHit * 5
         }
-        
-        const brickBottom = bricks.graphics.y
-        const brickTop = bricks.graphics.y - radius
-        const brickLeft = bricks.graphics.x
-        const brickRight = bricks.graphics.x + brick.width
-                if(
-            this.speedY > 0 &&
-            ballBottom >= brickTop &&
-            ballBottom - this.speedY * deltaTime <= paddleTop &&
-            ballRight > brickLeft &&
-            ballLeft < brickRight &&
-            ballTop >= brickBottom &&
-            ballTop + this.speedY * deltaTime <= brickBottom
+                
+            for (const brick of bricks) {
+            const brickLeft = brick.graphics.x;
+            const brickRight = brick.graphics.x + brick.width;
+            const brickTop = brick.graphics.y;
+            const brickBottom = brick.graphics.y + brick.height;
 
-        )
+            if (
+                ballRight > brickLeft &&
+                ballLeft < brickRight &&
+                ballBottom > brickTop &&
+                ballTop < brickBottom
+            ) {
+                this.speedY = -this.speedY;
+                break;
+            }
+        }
         {
             this.graphics.y = paddleTop - radius;
             this.speedY = -Math.abs(this.speedY)
