@@ -11,3 +11,4 @@ class Game{
         document.getElementById('game').appendChild(this.app.canvas);
     }
 }
+<script src="./js/main.js"></script>
