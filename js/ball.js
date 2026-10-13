@@ -53,7 +53,8 @@ class Ball{
             this.speedX = normHit * 5
         }
                 
-            for (const brick of bricks) {
+            for (let i = 0; i < bricks.length; i++) {
+            const brick = bricks[i];
             const bricks = 20;
             const brickLeft = brick.graphics.x;
             const brickRight = brick.graphics.x + brick.width;
@@ -91,7 +92,8 @@ class Ball{
                     this.graphics.y = brickBottom + radius;
                 }
             }
-
+            brick.graphics.parent.removeChild(brick.graphics);
+            bricks.splice(i, 1);
             break;
         }
                 
