@@ -27,7 +27,7 @@ class Ball{
             this.graphics.y = wallsize + radius;
             this.speedY = Math.abs(this.speedY)
         }
-        const paddle = 100;
+        const ballBottom = 
         
 
     }
