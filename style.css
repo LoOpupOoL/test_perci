@@ -13,17 +13,17 @@ body{
     align-items: center;
 }
 .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 24px 0;
-    gap: 24px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
 
-    width: 100%;
-    max-width: 1200px;
-    min-height: 96px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    font-family: 'Arkanoid', monospace;
+    color: white;
+    font-size: 20px;
 }
 .header_title{
     font-family: '8bit', Courier, monospace;
