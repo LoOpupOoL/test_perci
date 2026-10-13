@@ -45,7 +45,7 @@ class Paddle {
 
 
         this.graphics.x = Math.max(
-            20, Math.min(this.graphics.x, 800 - 20 - this.width)
+            10, Math.min(this.graphics.x, 790 - this.width)
         );
     }
 }

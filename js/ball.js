@@ -5,5 +5,7 @@ class Ball{
         this.graphics.fill(0xffffff);
         this.graphics.x = 400;
         this.graphics.y = 540;
+        this.speedX = 3;
+        this.speedY = -4;
     }
 }
