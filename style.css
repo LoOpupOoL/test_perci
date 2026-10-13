@@ -22,12 +22,12 @@ body{
     gap: 10px;
 
     font-family: 'Arkanoid', monospace;
-    color: white;
     font-size: 20px;
 }
 .header_title{
     font-family: '8bit', Courier, monospace;
     color: white;
+    width: 0;
 
 }
 .content{
