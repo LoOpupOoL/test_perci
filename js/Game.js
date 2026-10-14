@@ -34,8 +34,8 @@ class Game{
         this.walls = new Wall();
         this.app.stage.addChild(this.walls.graphics);
         this.bricks = [];
-        const rows = 6;
-        const cols = 11;
+        const rows = 1;
+        const cols = 1;
         const brickWidth = 50;
         const brickHigh = 20;
         const gap = 10;
