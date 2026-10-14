@@ -9,7 +9,7 @@ class Game{
         await this.app.init({
             width: 800,
             height: 600,
-            backgroundColor: 0x336699
+            backgroundColor: 0x080808
         });
         
         document.getElementById('game').appendChild(this.app.canvas);
@@ -17,7 +17,8 @@ class Game{
             text: "SCORE: 0",
             style: {
                 fontSize: 24,
-                fill: 0xffffff
+                fill: 0xffffff,
+                fontFamily:"8bit"
 
             }
         });
@@ -40,12 +41,13 @@ class Game{
         const gap = 10;
         const startX = 75;
         const startY = 70;
+        const colors = [0xff3333, 0xff8833, 0xffdd33, 0x33cc66, 0x33bbff, 0x5555ff]
         for(let row = 0; row < rows; row++)
             { for(let col = 0; col < cols; col++)
                 {
                     const x = startX + col * (brickWidth + gap);
                     const y = startY + row * (brickHigh + gap);
-                    const brick = new Brick(x,y);
+                    const brick = new Brick(x,y, colors[row]);
                     this.app.stage.addChild(brick.graphics)
                     this.bricks.push(brick)
                 }
