@@ -1,2 +1,7 @@
 const game = new Game();
-game.init();
+document.getElementById("startGame").addEventListener("click", async() => {
+    await game.init();
+    document.getElementById("menu").style.display= "none";
+    document.getElementById("geme").style.display= "block";
+
+})

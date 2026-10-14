@@ -69,3 +69,17 @@ body{
     font-size: 20px;
     text-align: center;
 }
+#game {
+    display: none;
+}
+
+#startGame {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+#startGame:hover {
+    color: rgb(213, 124, 0);
+}
