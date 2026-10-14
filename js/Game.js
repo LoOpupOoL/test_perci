@@ -68,6 +68,52 @@ class Game{
                 this.score += points;
                 this.scoreText.text = "SCORE: " + this.score;
             }
+            if (this.bricks.length === 0) {
+                this.gameOver = true;
+
+                gameMusic.pause();
+                gameMusic.currentTime = 0;
+
+                // Сохраняем рекорд
+                if (this.score > this.highScore) {
+                    this.highScore = this.score;
+                    localStorage.setItem("arkanoidHighscore", this.highScore);
+                }
+
+                // Останавливаем игру
+                this.app.stop();
+
+                // Надпись о победе
+                const winText = new PIXI.Text({
+                    text: "YOU WON!",
+                    style: {
+                        fontFamily: "8bit",
+                        fontSize: 48,
+                        fill: 0xffdd33,
+                        align: "center"
+                    }
+                });
+
+                winText.anchor.set(0.5);
+                winText.x = 400;
+                winText.y = 300;
+
+                this.app.stage.addChild(winText);
+
+                // Возвращаемся в меню через 3 секунды
+                setTimeout(() => {
+                    document.getElementById("game").style.display = "none";
+                    document.getElementById("menu").style.display = "block";
+
+                    document.querySelector(".header_titlevalue").textContent =
+                        String(this.score).padStart(5, "0");
+
+                    document.querySelector(".header_scorevalue").textContent =
+                        String(this.highScore).padStart(5, "0");
+                }, 3000);
+
+                return;
+            }
 
             if (this.ball.graphics.y - 10 > 600) {
                 this.gameOver = true;
