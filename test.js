@@ -12,6 +12,7 @@ document.getElementById("startGame").addEventListener("click", async () => {
     }
 
     game = new Game();
+    await game.init();
     gameMusic.currentTime = 0;
     gameMusic.play().catch(error => {
         console.error("Ошибка воспроизведения музыки:", error);
