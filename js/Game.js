@@ -75,13 +75,16 @@ class Game{
                     localStorage.setItem("arkanoidHighscore", this.highScore);
                 }
 
-                this.scoreText.text =
-                    "GAME OVER\n" +
-                    "SCORE: " + this.score + "\n" +
-                    "HIGH SCORE: " + this.highScore;
+                    this.app.stop();
 
-                this.scoreText.x = 300;
-                this.scoreText.y = 260;
+                    document.getElementById("game").style.display = "none";
+                    document.getElementById("menu").style.display = "block";
+
+                    document.querySelector(".header_titlevalue").textContent =
+                        String(this.score).padStart(5, "0");
+
+                    document.querySelector(".header_scorevalue").textContent =
+                        String(this.highScore).padStart(5, "0");
             }
         });
     }
