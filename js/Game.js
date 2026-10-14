@@ -71,6 +71,8 @@ class Game{
 
             if (this.ball.graphics.y - 10 > 600) {
                 this.gameOver = true;
+                gameMusic.pause();
+                gameMusic.currentTime = 0;
 
                 if (this.score > this.highScore) {
                     this.highScore = this.score;
